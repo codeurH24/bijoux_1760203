@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i%7CLato:300,300i,400,400i,700,700i%7CLato:300,300i,400,400i,700,700i%7CLato:300,300i,400,400i,700,700i%7CLato:300,300i,400,400i,700,700i%7CPrata:300,300i,400,400i,700,700i" media="all" />
+    <link rel="stylesheet" href="/asset/css/main.css" />
+    <title>Bijoux</title>
+</head>
+<body>
+    <header>
+        <nav class="responsive-page">
+            <div class="wrapper">
+                <div class="logo">
+                    Élégance
+                </div>
+                <ul>
+                    <li onclick="setActiveLink(this)">
+                        <a href="#" class="active">Accueil</a>
+                        <div class="under-effect-link"></div>
+                    </li>
+                    <li onclick="setActiveLink(this)">
+                        <a href="#">Bijoux</a>
+                        <div class="under-effect-link"></div>
+                    </li>
+                    <li onclick="setActiveLink(this)">
+                        <a href="#">À propos</a>
+                        <div class="under-effect-link"></div>
+                    </li>
+                    <li onclick="setActiveLink(this)">
+                        <a href="#">Contactez-nous</a>
+                        <div class="under-effect-link"></div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="content responsive-page">
+            <div class="text">
+                <h1>Élégance bijouterie</h1>
+                <p>
+                    Pour des bijoux uniques qui subliment votre style et vous accompagnent tout au long de votre vie !
+                </p>
+                <div>
+                    <button>Contactez-nous</button>
+                </div>
+            </div>
+            <div id="header-slider">
+                <div class="slider">
+                    <div class="show">
+                        <img class="visible" src="/asset/image/item-1-.webp" alt="bijoux 1 slider" />
+                        <img src="/asset/image/item-3-.webp" alt="bijoux 3 slider" />
+                        <img src="/asset/image/item-2-.webp" alt="bijoux 2 slider" />
+                        <img src="/asset/image/item-4-.webp" alt="bijoux 4 slider" />
+                    </div>
+                    <div class="wrapper-point tools">
+                        <span class="point active" onmouseover="changeImage(this, false)" onmouseleave="changeImage(this, true)"></span>
+                        <span class="point" onmouseover="changeImage(this)" onmouseleave="changeImage(this, true)"></span>
+                        <span class="point" onmouseover="changeImage(this)" onmouseleave="changeImage(this, true)"></span>
+                        <span class="point" onmouseover="changeImage(this)" onmouseleave="changeImage(this, true)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="section1">
+            <div class="responsive-page">
+                <div class="item">
+                    <div>
+                        <svg><use href="/asset/icons.svg#plane"></svg>
+                    </div>
+                    <div>
+                        <h1>Livraison 48h</h1>
+                        <p>
+                            Nous garantissons une livraison rapide et efficace en moins de 2 jours.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <svg><use href="/asset/icons.svg#zen"></svg>
+                    </div>
+                    <div>
+                        <h1>Satisfait ou remboursé</h1>
+                        <p>
+                            Nous garantissons la qualité de nos bijoux avec remboursement complet en cas de non-satisfaction.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <svg><use href="/asset/icons.svg#chat"></svg>
+                    </div>
+                    <div>
+                        <h1>Assistance 24/7</h1>
+                        <p>
+                            Nous sommes là pour vous aider à tout moment, jour et nuit.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <svg><use href="/asset/icons.svg#cb"></svg>
+                    </div>
+                    <div>
+                        <h1>Paiement sécurisé</h1>
+                        <p>
+                            Nous utilisons les technologies les plus avancées pour garantir la sécurité de vos transactions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="responsive-page">
+                <div class="separator"></div>
+            </div>
+        </section>
+        <section id="section2">
+            <div class="responsive-page">
+                <div>
+                    <h1>Nos Produits</h1>
+                    <p>Nos bijoux sont en argent 925 et sertis de diamants, un mariage parfait de brillance et d'élégance.</p>
+                </div>
+                <div>
+                    <div class="item">
+                        <div>
+                            <img src="/asset/image/item-2-.png" alt="item 2" />
+                        </div>
+                        <div>
+                            <div class="name">Bague "Madame"</div>
+                            <div class="description">
+                                Pour les futures mariées, une bague symbole d'amour éternel et d'engagement
+                            </div>
+                            <div class="price">499€</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="/asset/image/item-3-.png" alt="item 2" />
+                        </div>
+                        <div>
+                            <div class="name">Bague "Duo"</div>
+                            <div class="description">
+                                Des lignes de diamants entrelacées pour un amour indissociable et éternel.
+                            </div>
+                            <div class="price">749€</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="/asset/image/carte-1-.png" alt="item 2" />
+                        </div>
+                        <div>
+                            <div class="name">Bague "Crown"</div>
+                            <div class="description">
+                                Un design frais et champêtre, idéal pour les mariées qui aiment la simplicité. 
+                            </div>
+                            <div class="price">209€</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="/asset/image/carte-2-.png" alt="item 2" />
+                        </div>
+                        <div>
+                            <div class="name">Bague "Agua"</div>
+                            <div class="description">
+                                Une bague sertie de diamants pour briller de mille feux et faire briller votre amour.
+                            </div>
+                            <div class="price">869€</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button>En savoir plus</button>
+                </div>
+            </div>
+        </section>
+        <section id="section3">
+            <div class="responsive-page">
+                <div>
+                    <h1>Les avis de nos clients</h1>
+                    <p>Ils ont choisi Élégance Bijouterie pour leur bijou de rêve. </p>
+                </div>
+                <div class="items">
+                    <div class="item">
+                        <div>
+                            <img src="/asset/image/vince-fleming-_THUISs23CI-unsplash.jpg" alt="vince fleming" />
+                        </div>
+                        <div class="fullname">Justin B.</div>
+                        <p>J'ai offert la bague "Madame" à ma fiancée pour notre engagement et elle était émerveillée par la beauté et la qualité de la bague. Je suis ravi de mon choix et je remercie Élégance Bijouterie pour leur service exceptionnel.</p>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="/asset/image/icons8-team-FcLyt7lW5wg-unsplash.jpg" alt="Carol A" />
+                        </div>
+                        <div class="fullname">Carol A.</div>
+                        <p>J'ai acheté la bague "Crown" pour ma fille pour son diplôme et elle était aux anges. Le design frais et champêtre est parfait pour les occasions spéciales. Je suis très satisfaite de la qualité et du service d'Élégance Bijouterie.</p>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="/asset/image/thisisengineering-raeng-TXxiFuQLBKQ-unsplash.jpg" alt="Claire C" />
+                        </div>
+                        <div class="fullname">Claire C.</div>
+                        <p>Le modèle Duo est vraiment élégant et sophistiqué. Mes amis et ma famille sont tous tombés amoureux de ma bague et je la porte avec fierté. Merci Élégance bijouterie pour ce bijou mémorable.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section4">
+            <div class="responsive-page">
+                <div>
+                    <h1>Nos créations</h1>
+                    <p>Découvrez la collection Printemps/Été 2023.</p>
+                </div>
+                <div class="slider">
+                    <div class="show">
+                        <img src="/asset/image/carte-10-full.webp" alt="carte 3 full" />
+                        <img src="/asset/image/carte-3-full.webp" alt="carte 3 full" />
+                        <img src="/asset/image/carte-2-full.webp" alt="carte 3 full" />
+                        <img src="/asset/image/carte-5-full.webp" alt="carte 3 full" />
+                        <img src="/asset/image/carte-6-full.webp" alt="carte 3 full" />
+                        <img src="/asset/image/carte-7-full.webp" alt="carte 3 full" />
+                        <img src="/asset/image/carte-8-full.webp" alt="carte 3 full" />
+                        <img src="/asset/image/carte-9-full.webp" alt="carte 3 full" />
+                        <img src="/asset/image/carte-11-full.webp" alt="carte 3 full" />
+                    </div>
+                    <div class="tools">
+
+                        <svg class="back" onclick="sliderShiftThumbBack()"><use href="/asset/icons.svg#btn-back"></svg>
+                        <svg class="next" onclick="sliderShiftThumbNext()"><use href="/asset/icons.svg#btn-next"></svg>
+
+                        <div class="thumbs">
+                            <div class="item" onclick="choiceClick(this)">
+                                <img src="/asset/image/carte-10-thumb.webp" alt="carte 10 thumb" />
+                            </div>
+                            <div class="item" onclick="choiceClick(this)">
+                                <img src="/asset/image/carte-3-thumb.webp" alt="carte 3 thumb" />
+                            </div>
+                            <div class="item" onclick="choiceClick(this)">
+                                <img src="/asset/image/carte-2-thumb.webp" alt="carte 2 thumb" />
+                            </div>
+                            <div class="item" onclick="choiceClick(this)">
+                                <img src="/asset/image/carte-5-thumb.webp" alt="carte 5 thumb" />
+                            </div>
+                            <div class="item" onclick="choiceClick(this)">
+                                <img src="/asset/image/carte-6-thumb.webp" alt="carte 6 thumb" />
+                            </div>
+                            <div class="item" onclick="choiceClick(this)">
+                                <img src="/asset/image/carte-7-thumb.webp" alt="carte 7 thumb" />
+                            </div>
+                            <div class="item" onclick="choiceClick(this)">
+                                <img src="/asset/image/carte-8-thumb.webp" alt="carte 8 thumb" />
+                            </div>
+                            <div class="item" onclick="choiceClick(this)">
+                                <img src="/asset/image/carte-9-thumb.webp" alt="carte 9 thumb" />
+                            </div>
+                            <div class="item" onclick="choiceClick(this)">
+                                <img src="/asset/image/carte-11-thumb.webp" alt="carte 11 thumb" />
+                            </div>
+                            <!-- En double -->
+                            <div class="item" onclick="choiceClick(this)">
+                                <img src="/asset/image/carte-3-thumb.webp" alt="carte 3 thumb" />
+                            </div>
+                            <div class="item" onclick="choiceClick(this)">
+                                <img src="/asset/image/carte-10-thumb.webp" alt="carte 10 thumb" />
+                            </div>
+                            <div class="item" onclick="choiceClick(this)">
+                                <img src="/asset/image/carte-2-thumb.webp" alt="carte 2 thumb" />
+                            </div>
+                            <div class="item" onclick="choiceClick(this)">
+                                <img src="/asset/image/carte-5-thumb.webp" alt="carte 5 thumb" />
+                            </div>
+                            <div class="item" onclick="choiceClick(this)">
+                                <img src="/asset/image/carte-6-thumb.webp" alt="carte 6 thumb" />
+                            </div>
+                            <div class="item" onclick="choiceClick(this)">
+                                <img src="/asset/image/carte-7-thumb.webp" alt="carte 7 thumb" />
+                            </div>
+                            <div class="item" onclick="choiceClick(this)">
+                                <img src="/asset/image/carte-8-thumb.webp" alt="carte 8 thumb" />
+                            </div>
+                            <div class="item" onclick="choiceClick(this)">
+                                <img src="/asset/image/carte-9-thumb.webp" alt="carte 9 thumb" />
+                            </div>
+                            <div class="item" onclick="choiceClick(this)">
+                                <img src="/asset/image/carte-11-thumb.webp" alt="carte 11 thumb" />
+                            </div>
+                            <!-- -->
+                            <div class="item" onclick="choiceClick(this)">
+                                <img src="/asset/image/carte-3-thumb.webp" alt="carte 3 thumb" />
+                            </div>
+                            <div class="item" onclick="choiceClick(this)">
+                                <img src="/asset/image/carte-10-thumb.webp" alt="carte 10 thumb" />
+                            </div>
+                            <div class="item" onclick="choiceClick(this)">
+                                <img src="/asset/image/carte-2-thumb.webp" alt="carte 2 thumb" />
+                            </div>
+                            <div class="item" onclick="choiceClick(this)">
+                                <img src="/asset/image/carte-2-thumb.webp" alt="carte 2 thumb" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div>
+                    <button>Contactez-nous</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="responsive-page">
+            <div>
+                <h1>Élégance</h1>
+                <p>Des bijoux uniques et sublimes, tout au long de votre vie !</p>
+                <form>
+                    <div>
+                        <input type="email" name="email" id="email" placeholder="Entrez votre email">
+                        <button>S'inscrire</button>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="checkbox" id="checkbox" />
+                        <label for="checkbox">
+                            En soumettant ce formulaire, j’accepte que des données saisies soient collectées dans le but de traiter ma demande.
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="contact">
+                <h1>Nous contacter</h1>
+                <div>
+                    <div class="item">
+                        <svg><use href="/asset/icons.svg#contact-address"></svg>
+                        <div>Avenue Gustave Eiffel, Paris 75000</div>
+                    </div>
+                    <div class="item">
+                        <svg><use href="/asset/icons.svg#contact-email"></svg>
+                        <div>bijoutier@sitew.com</div>
+                    </div>
+                    <div class="item">
+                        <svg><use href="/asset/icons.svg#contact-phone"></svg>
+                        <div>00-00-00-00-00</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h1>Informations</h1>
+                <div class="infos">
+                    <div class="item">
+                        <svg><use href="/asset/icons.svg#payment"></svg>
+                        <div>Paiement sécurisé</div>
+                    </div>
+                    <div class="item">
+                        <svg><use href="/asset/icons.svg#delivery"></svg>
+                        <div>Livraison partout en France</div>
+                    </div>
+                    <div class="item">
+                        <svg><use href="/asset/icons.svg#satisfied"></svg>
+                        <div>Satisfait ou remboursé sous 30 jours</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/asset/js/navLinkEffect.js"></script>
+    <script src="/asset/js/sliderHeader.js"></script>
+    <script src="/asset/js/sliderCreations.js"></script>
+</body>
+</html>

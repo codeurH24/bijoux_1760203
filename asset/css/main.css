@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Prata&display=swap');
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: Lato , 'Source Sans Pro', sans-serif;
+}
+
+* {
+    position: relative;
+}
+
+.responsive-page  {
+    width: 1200px;
+    margin: auto;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+li {
+    list-style-type: none;
+}
+
+h1 {
+    font-family: Prata;
+    color: hsl(213, 0%, 23%);
+}
+
+p, a {
+    font-family: Lato , 'Source Sans Pro', sans-serif;
+}
+
+button {
+    background-color: hsl(37, 46%, 55%);;
+    border-width: 0;
+    color: white;
+    padding: 0.7rem 4rem;
+    border-radius: 5px;
+    transition: background-color 0.4s;
+}
+button:hover {
+    background-color: #A87F3E;
+}
+
+svg,svg use {
+    width: 32px;
+    height: 32px;
+    color: hsl(37, 46%, 55%);
+}
+
+/* HEADER */
+header {
+    background-color: #DBDBDC;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+header nav {
+    /* display: flex;
+    flex-direction: row; */
+    flex: 1;
+}
+header nav .wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    max-width: 60%;
+}
+header nav .logo {
+    font-family: Prata;
+    flex: 1;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    flex: 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+header nav ul li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+header nav ul li a:hover {
+    color: #C19957;
+}
+header nav ul li a {
+    padding: 1rem 2rem;
+    display: flex;
+    transition: color 0.4s;
+}
+a ~ .under-effect-link {
+    height: 3px;
+    background-color: #DAC29A;
+    width: 0px;
+    transition: width 0.4s;
+}
+
+a.active ~ .under-effect-link {
+    height: 3px;
+    background-color: #DAC29A;
+    width: 52%;
+}
+
+header .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 10;
+}
+
+header .content .text {
+    text-align: center;
+    padding: 2rem;
+    flex: 1;
+}
+
+header .content .text h1 {
+    font-size: 45px;
+    letter-spacing: 1px;
+}
+header .content .text p {
+    padding-bottom: 2rem;
+    font-family: Lato , 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+}
+
+header .content .slider .point {
+    width: 15px;
+    height: 15px;
+    background-color: #777;
+    border-radius: 100%;
+    display: inline-block;
+    margin: 0 0.6rem 
+}
+header .content .slider .point.active {
+    background-color: #e7e7e7;
+    border: 1px solid #aaaaaa;
+}
+
+.wrapper-point {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.separator {
+    background: rgb(193, 153, 87);
+    width: 600px;
+    height: 1px;
+    margin: auto;
+}
+
+/* HEADER SLIDER */
+#header-slider .slider {
+    max-height: 360px;
+    height: 100%;
+    overflow: hidden;
+}
+#header-slider .slider  .show {
+    height: 100%;
+    flex: 1;
+}
+#header-slider {
+    flex: 1;
+    height: 100%;
+    padding-top: 2rem;
+}
+
+/* MAIN */
+
+/* section 1 */
+
+#section1  {
+    padding: 3rem 0;
+}
+
+#section1 > div > div > div > h1 {
+    font-size: 20px;
+    font-family: Lato , 'Source Sans Pro', sans-serif;
+}
+#section1 svg  {
+    width: 40px;
+    height: 40px;
+}
+#section1 > div{
+    display: flex;
+    flex-direction: row;
+}
+
+#section1 > div > div {
+    flex: 1;
+}
+
+#section1 .item {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    padding-right: 1rem;
+}
+
+#section1 .item > div:first-child {
+    padding-top: 2rem;
+    padding-right: 1rem;
+}
+
+/* section 2 */
+
+#section2 h1 {
+    font-family: Lato , 'Source Sans Pro', sans-serif;
+}
+
+#section2 > div > div:nth-child(1) {
+    text-align: center;
+    padding: 3rem 0;
+}
+#section2 > div > div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+}
+
+#section2 > div > div:nth-child(2) > div {
+    flex: 1;
+}
+
+#section2 .name, 
+#section2 .price
+{
+    color: hsl(37, 46%, 55%);
+}
+
+#section2 .item > div:first-child {
+    height: 250px;
+}
+#section2 .item > div:last-child {
+    text-align: center;
+}
+#section2 .item > div:last-child > div {
+    padding: 0.5rem 0;
+}
+
+#section2 > div > div:nth-child(3) {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+/* section 3 */
+
+#section3 h1 {
+    font-family: Lato , 'Source Sans Pro', sans-serif;
+}
+
+#section3 {
+    background-color: #DBDBDC;
+    background-color: #EFEFEF;
+}
+
+#section3 > div > div:nth-child(1) {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+#section3 > div {
+    background-image: url(/asset/image/Eulnh2kzUR0-unsplash.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 50%;
+}
+
+#section3 .items {
+    display: flex;
+    flex-direction: row;
+}
+
+#section3 .items .fullname{
+    color: hsl(37, 46%, 55%);
+    padding-top: 2rem;
+    text-align: center;
+}
+#section3 .items p{
+    text-align: center;
+}
+
+#section3 .items > div {
+    flex: 1;
+}
+
+#section3 .items .item > div:first-child {
+    height: 200px;
+    overflow: hidden;
+    clip-path: circle();
+}
+
+#section3 > div > div.items > div.item > div:nth-child(1) > img {
+    width: 238px;
+    margin-left: 84px;
+}
+
+#section3 > div > div > div > figure > div {
+    clip-path: circle();
+    width: 209px;
+    display: flex;
+    justify-content: center;
+}
+
+#section3 > div > div > div > figure > img {
+    width: 100%;
+}
+
+/* section 4 */
+
+#section4 h1 {
+    font-family: Lato , 'Source Sans Pro', sans-serif;
+}
+#section4 > div > div:nth-child(1) {
+    text-align: center;
+}
+#section4 .thumbs {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    height: 80px;
+    /* width: 620px; */
+    overflow: hidden;
+    margin: auto;
+    transition: transform 1s;
+}
+
+#section4 .thumbs .item {
+    transform: translateX(0px);
+    cursor: pointer;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 52%, rgba(0,0,0,0) 100%);
+    transition: transform 1s, background-color 1s;
+    background-color: white;
+}
+
+#section4 .thumbs .item:hover {
+    background-color: rgb(86, 86, 86);
+}
+
+#section4 .tools {
+    height: 80px;
+    width: 620px;
+    margin: auto;
+}
+
+/* boutons back et next du slider */
+#section4 .tools > svg {
+    position: absolute;
+    z-index: 100;
+    height: 100%;
+    width: 54px;
+}
+#section4 .tools > svg.disable {
+    filter: grayscale(1);
+}
+#section4 .tools > svg.back {
+    left: -54px;
+}
+#section4 .tools > svg.next {
+    right: -54px;
+}
+
+
+#section4 .item img {
+    height: 100%;
+    background: linear-gradient(0deg, rgba(255,253,253,0) 0%, rgba(255,255,255,0.8157387955182073) 52%, rgba(255,255,255,1) 100%);
+}
+#section4 .show {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 300px;
+}
+#section4 .show img {
+    max-height: 300px;
+    background-color: white;
+}
+
+#section4 > div > div:last-child {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.slider .show img {
+    opacity: 0;
+    transition: 1s opacity linear;
+    user-select: none;
+    position: absolute;
+    height: 100%;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+.slider .show img.visible {
+    opacity: 1;
+}
+
+/* FOOTER */
+footer {
+    background-color: #DBDBDC;
+    min-height: 200px;
+    padding-bottom: 2rem;
+}
+footer > div {
+    background-color: #DBDBDC;
+    min-height: 200px;
+    display: flex;
+    flex-direction: row;
+}
+footer > div > div {
+    flex: 1;
+    padding: 0 2rem;
+}
+
+footer > div:first-child form ,
+footer > div:first-child form > div {
+    width: 100%;
+}
+footer > div:first-child form > div:first-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+footer > div:first-child form > div:first-child input {
+    flex: 10;
+    height: 18px;
+}
+footer > div:first-child form > div:first-child button {
+    flex: 2;
+    padding: 0.4rem 1rem;
+}
+body > footer > div > div:nth-child(1) > form > div:nth-child(2) > label {
+    text-align: center;
+    display: inline-block;
+    width: 90%;
+    vertical-align: top;
+    font-family: Lato , 'Source Sans Pro', sans-serif;
+    font-size: 14.00px;
+}
+body > footer > div > div:nth-child(1) > form > div:nth-child(2) > input {
+    display: inline-block;
+}
+
+footer .infos .item,
+footer .contact .item {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    align-items: center;
+}
+
+footer > div > div h1 {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+footer > div > div:nth-child(2) h1,
+footer > div > div:nth-child(3) h1
+{
+    font-size: 24px;
+    font-family: Lato , 'Source Sans Pro', sans-serif;
+}
