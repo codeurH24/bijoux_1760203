@@ -177,8 +177,8 @@
         function initSlider() {
             const slider = document.querySelector('#section4 .slider');
             const thumbs = slider.querySelectorAll('.thumbs .item img');
-            // console.log('initSlider() thumbs', thumbs);
-
+            
+            
             /* 
              recheche de l'element actif parmis les miniatures.
              si aucune miniature n'est trouver choisir la premiere des miniatures
@@ -197,7 +197,7 @@
                 elementActive = thumbs[0];
                 elementActive.classList.add('active');
             }
-                
+            
             const pathThumbs = getPathImages(elementActive);
 
             const basenameThumb = basename(elementActive.src);
@@ -218,7 +218,10 @@
                 img.style.zIndex = 1;
             }
         }
+        
         initSlider();
+            
+        
 
         function basename(str) {
             return str.split('/').reverse()[0];
@@ -236,7 +239,7 @@
             const src = e.querySelector('img').src;
             const basename = src.split('/').reverse()[0];
             const basenameFull = basename.replace("thumb", 'full');
-            console.log('choiceClick basenameFull', basenameFull );
+            
 
             const images = document.querySelectorAll('#section4 .slider .show img');
             
@@ -248,7 +251,7 @@
                 const basename = src.split('/').reverse()[0];
                 
                 if (basename === basenameFull) {
-                    console.log('image', image);
+                    
                     image.style.zIndex = 2;
                     image.classList.add('visible');
                 }

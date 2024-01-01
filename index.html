@@ -364,8 +364,126 @@
             </div>
         </div>
     </footer>
+
+    <script>
+
+        /*
+            Ce script ne peut etre ranger dans un dossier car
+            il permet de modifier les url lorsque le serveur qui heberge
+            ce template à comme racine un dossier.
+            
+            Ce script est là pour corriger les effets de page 404 en faisant précéder
+            toutes les url par le dossier.
+
+            Ce script est particulierement utile pour github page.
+        */
+        
+        const {
+            origin,
+            pathname
+        } = document.location
+
+        async function curlStatus(url) {
+            return new Promise((resolve, reject) => {
+                var xhr = new XMLHttpRequest();
+                
+                xhr.open('GET', url, true);
+
+                xhr.onload = function () {
+                    resolve(xhr.status);
+                };
+                
+                xhr.onerror = function () {
+                    reject(null);
+                };
+                
+                xhr.send();
+            });
+        }
+        
+        function remplacerLesURL(path, tagName, attribut) {
+            
+            
+            const tags = document.getElementsByTagName(tagName);
+
+            if(tagName === 'use') {
+                for (const tag of tags) {
+                    
+                    let url = tag.href.baseVal;
+                    
+                    const islocal = url[0] === '/';
+                    if (islocal) {
+                        url = `/${path}${url}`;
+                        tag.href.baseVal = url;
+                    }
+                }
+            } else if (tagName === 'script') {
+
+                for (const tag of tags) {
+                    let url = tag[attribut];
+
+                    const islocal = /.+github.*/.test(url);
+                    if (islocal) {
+                        url = url.replace(origin, origin+'/'+path);
+                        let nouveauScript = document.createElement('script');
+                        
+                        fetch(url)
+                        .then(response => response.text())
+                        .then(scriptText => {
+                            nouveauScript.innerHTML = scriptText;
+                            document.head.appendChild(nouveauScript);
+                        });
+
+                    }
+                }
+                
+                
+            } else {
+                for (const tag of tags) {
+                    let url = tag[attribut];
+
+                    const islocal = /.+github.*/.test(url);
+                    if (islocal) {
+                        url = url.replace(origin, origin+'/'+path);
+                        tag[attribut] = url;
+                    }
+                }
+            }
+        }
+
+        async function main() {
+
+            try {
+                const resultat1 = await curlStatus(`${origin}/asset/js/navLinkEffect.js`);
+                if (resultat1 !== 404) return;
+
+                const path = pathname.split('/')[1] ? pathname.split('/')[1] : null;
+
+                const resultat2 = await curlStatus(`${origin}/${path}/asset/js/navLinkEffect.js`);
+                
+                remplacerLesURL(path, 'link', 'href');
+                remplacerLesURL(path, 'a', 'src');
+                remplacerLesURL(path, 'img', 'src');
+                remplacerLesURL(path, 'use', 'href');
+                remplacerLesURL(path, 'script', 'src');
+
+                console.clear();
+                console.log(`La racine du site n'est pas conforme, un script a fait les corrections pour que la page web fonctionne.`);
+                console.log(`Pour cela, la console à été clear.`);
+                console.log(`Racine du site détecté /${path}`);
+
+            } catch (erreur) {
+                console.error(erreur);
+            }
+        }
+
+        main();
+    </script>
+
+
     <script src="/asset/js/navLinkEffect.js"></script>
     <script src="/asset/js/sliderHeader.js"></script>
     <script src="/asset/js/sliderCreations.js"></script>
+
 </body>
 </html>
